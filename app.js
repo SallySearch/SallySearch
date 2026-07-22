@@ -1,24 +1,35 @@
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 
+const categoryButtons = document.querySelectorAll(".categoryButton");
+
 let selectedCategory = "general";
 
 
-// Kategorie auswählen
-window.setCategory = function(category) {
+// Kategorie Buttons
+categoryButtons.forEach(function(button) {
 
-    selectedCategory = category;
+    button.addEventListener("click", function() {
 
-};
+        selectedCategory = button.dataset.category;
+
+    });
+
+});
 
 
-// Suchbegriff anpassen
+// Suchbegriff vorbereiten
 function prepareSearchTerm(term) {
 
-    if (selectedCategory === "lego_used" || selectedCategory === "lego_new") {
+    if (
+        selectedCategory === "lego_used" ||
+        selectedCategory === "lego_new"
+    ) {
 
         if (!term.toLowerCase().includes("lego")) {
+
             return "LEGO " + term;
+
         }
 
     }
@@ -27,7 +38,9 @@ function prepareSearchTerm(term) {
     if (selectedCategory === "schleich") {
 
         if (!term.toLowerCase().includes("schleich")) {
+
             return "Schleich " + term;
+
         }
 
     }
@@ -43,19 +56,23 @@ function startSearch() {
 
     const term = searchInput.value.trim();
 
+
     if (term === "") {
+
         return;
+
     }
 
 
     const finalTerm = prepareSearchTerm(term);
+
 
     openSearches(selectedCategory, finalTerm);
 
 }
 
 
-// Enter
+// Enter-Taste
 searchInput.addEventListener("keydown", function(event) {
 
     if (event.key === "Enter") {
@@ -67,7 +84,7 @@ searchInput.addEventListener("keydown", function(event) {
 });
 
 
-// Button
+// Suchbutton
 searchButton.addEventListener("click", function() {
 
     startSearch();
