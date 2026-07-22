@@ -21,12 +21,7 @@ function startSearch() {
 
     if (searchTerm !== "") {
 
-        alert(
-            "Sally sucht nach: " 
-            + searchTerm 
-            + "\nKategorie: " 
-            + selectedCategory
-        );
+        openSearches(selectedCategory, searchTerm);
 
     }
 
