@@ -12,16 +12,53 @@ function setCategory(category) {
 }
 
 
+// Suche vorbereiten
+function prepareSearchTerm(term) {
+
+    if (selectedCategory === "lego_used" || selectedCategory === "lego_new") {
+
+        if (!term.toLowerCase().includes("lego")) {
+
+            return "LEGO " + term;
+
+        }
+
+    }
+
+
+    if (selectedCategory === "schleich") {
+
+        if (!term.toLowerCase().includes("schleich")) {
+
+            return "Schleich " + term;
+
+        }
+
+    }
+
+
+    return term;
+
+}
+
+
 // Suche starten
 function startSearch() {
 
-    const searchTerm = searchInput.value.trim();
+    const input = searchInput.value.trim();
 
-    if (searchTerm !== "") {
 
-        openSearches(selectedCategory, searchTerm);
+    if (input === "") {
+
+        return;
 
     }
+
+
+    const searchTerm = prepareSearchTerm(input);
+
+
+    openSearches(selectedCategory, searchTerm);
 
 }
 
