@@ -2,14 +2,13 @@ function openSearches(category, term) {
 
     let urls = [];
 
-
     if (category === "vinyl") {
 
         urls = [
             "https://www.discogs.com/search/?q=",
             "https://www.amazon.de/s?k=",
             "https://www.ebay.de/sch/i.html?_nkw=",
-            "https://www.ebay.de/sch/i.html?_sofindtype=so&_nkw="
+            "https://www.ebay.de/sch/i.html?_nkw="
         ];
 
     }
@@ -28,17 +27,45 @@ function openSearches(category, term) {
     }
 
 
-    urls.forEach(function(url, index) {
+    if (category === "schleich") {
 
-    setTimeout(function() {
+        urls = [
+            "https://www.ebay.de/sch/i.html?_nkw=",
+            "https://www.amazon.de/s?k=",
+            "https://www.google.com/search?q="
+        ];
+
+    }
+
+
+    if (category === "cd") {
+
+        urls = [
+            "https://www.ebay.de/sch/i.html?_nkw=",
+            "https://www.amazon.de/s?k=",
+            "https://www.discogs.com/search/?q="
+        ];
+
+    }
+
+
+    if (category === "general") {
+
+        urls = [
+            "https://www.google.com/search?q=",
+            "https://www.ebay.de/sch/i.html?_nkw="
+        ];
+
+    }
+
+
+    urls.forEach(function(url) {
 
         window.open(
             url + encodeURIComponent(term),
             "_blank"
         );
 
-    }, index * 700);
-
-});
+    });
 
 }
