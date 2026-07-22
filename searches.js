@@ -28,13 +28,17 @@ function openSearches(category, term) {
     }
 
 
-    urls.forEach(function(url) {
+    urls.forEach(function(url, index) {
+
+    setTimeout(function() {
 
         window.open(
             url + encodeURIComponent(term),
             "_blank"
         );
 
-    });
+    }, index * 700);
+
+});
 
 }
