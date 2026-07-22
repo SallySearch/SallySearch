@@ -9,8 +9,6 @@ function setCategory(category) {
 
     selectedCategory = category;
 
-    alert("Kategorie gewählt: " + category);
-
 }
 
 
@@ -28,7 +26,7 @@ function startSearch() {
 }
 
 
-// Suche mit Enter
+// Enter-Taste
 searchInput.addEventListener("keydown", function(event) {
 
     if (event.key === "Enter") {
@@ -40,7 +38,7 @@ searchInput.addEventListener("keydown", function(event) {
 });
 
 
-// Suche mit Button
+// Suchbutton
 searchButton.addEventListener("click", function() {
 
     startSearch();
