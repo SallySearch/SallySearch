@@ -1,16 +1,28 @@
-## Hi there 👋
+# Sally Search
 
-<!--
-**SallySearch/SallySearch** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Die Recherche-App für Second-Hand-Händler und Sammler.
 
-Here are some ideas to get you started:
+## Ziel
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Sally Search unterstützt bei der Bewertung und Recherche von:
+
+- Vinyl
+- LEGO
+- CDs/DVDs
+- Schleich
+- weiteren Sammlerartikeln
+
+## Geplante Funktionen
+
+- Recherche-Assistent
+- Preisvergleich
+- Suchverlauf
+- Barcode-Scanner
+- OCR-Erkennung
+- Spracheingabe
+- Matrix-Erkennung für Vinyl
+- LEGO-Erkennung
+
+## Version
+
+0.1 – Foundation
