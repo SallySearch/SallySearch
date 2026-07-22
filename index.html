@@ -12,49 +12,55 @@
 <div class="app">
 
     <h1>Sally Search</h1>
+
     <p class="subtitle">
         Recherche-Tool für Vinyl, LEGO & Sammlerartikel
     </p>
+
 
     <input 
         type="text" 
         id="searchInput" 
         placeholder="Artikel eingeben..."
     >
-    
+
+
     <button id="searchButton">
-    🔍 SUCHEN
-</button>
+        🔍 SUCHEN
+    </button>
+
 
     <div class="categories">
 
-    <button onclick="setCategory('vinyl')">
-        🎵 Vinyl
-    </button>
+        <button onclick="setCategory('vinyl')">
+            🎵 Vinyl
+        </button>
 
-    <button onclick="setCategory('lego_used')">
-        🧱 LEGO gebraucht
-    </button>
+        <button onclick="setCategory('lego_used')">
+            🧱 LEGO gebraucht
+        </button>
 
-    <button onclick="setCategory('lego_new')">
-        🧱 LEGO neu
-    </button>
+        <button onclick="setCategory('lego_new')">
+            🧱 LEGO neu
+        </button>
 
-    <button onclick="setCategory('schleich')">
-        🦖 Schleich
-    </button>
+        <button onclick="setCategory('schleich')">
+            🦖 Schleich
+        </button>
 
-    <button onclick="setCategory('cd')">
-        💿 CD / DVD
-    </button>
+        <button onclick="setCategory('cd')">
+            💿 CD / DVD
+        </button>
 
-    <button onclick="setCategory('general')">
-        📦 Allgemein
-    </button>
+        <button onclick="setCategory('general')">
+            📦 Allgemein
+        </button>
+
+    </div>
 
 </div>
 
-</div>
+
 <script src="searches.js"></script>
 <script src="app.js"></script>
 
